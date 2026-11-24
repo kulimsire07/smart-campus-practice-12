@@ -13,14 +13,14 @@ Comparison of **Code-Based** (HTML/CSS/JS) and **Low-Code** (Appsmith Cloud Free
 
 ## Repository Structure
 - `code-based/` — Modular HTML/CSS/JavaScript implementation (`rulesEngine.js`, `app.js`, `index.html`, `styles.css`, `tests.js`).
-- `low-code/` — Appsmith `JSObject` (`AvailabilityEngine.js`) and uncompressed JSON application export (`smart-campus-appsmith-export.json`).
+- `Untitled application 1.json` — Uncompressed Appsmith JSON application export.
 - `docs/` — Engineering reports:
   - `01-requirements-and-contract.md` (User story, AC1–AC6, I/O contract)
   - `02-test-results.md` (Eight-case test table T1–T8)
   - `03-comparison-and-recommendation.md` (Measured effort, comparison matrix, recommendation)
   - `04-security-review.md` (Security checklist: Lecture #12 & OWASP LCNC Top 10)
   - `05-ai-reflection.md` (Short AI-use reflection)
-- `screenshots/` — Visual evidence of both implementations, responsive views, T1–T8 test results, and manual security checks.
+- Root `.png` / `.jpg` files — Visual evidence of both implementations, responsive views, and `T1–T8` test results.
 
 ## How to Run & Test (Code-Based)
 - **In Browser:** Open the [GitHub Pages Live Demo](https://kulimsire07.github.io/smart-campus-practice-12/code-based/) and click **Run T1–T8 Suite**.
