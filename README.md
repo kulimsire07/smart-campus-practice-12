@@ -4,7 +4,7 @@ Comparison of **Code-Based** (HTML/CSS/JS) and **Low-Code** (Appsmith Cloud Free
 
 ## Live Demos
 - **Code-Based Live Demo (GitHub Pages):** https://kulimsire07.github.io/smart-campus-practice-12/code-based/
-- **Low-Code Live Demo (Appsmith Public App):** `[INSERT YOUR APPSMITH PUBLIC URL]`
+- **Low-Code Live Demo (Appsmith Public App):** https://tursynkul.appsmith.com/app/untitled-application-1/page1-6b05e244405210eb614bc1c2
 
 ## Scenario & Scope
 - **Fictional Room:** Room 304 (Smart Lab) with 3 immutable fictional bookings (`BK-101`, `BK-102`, `BK-103`).
