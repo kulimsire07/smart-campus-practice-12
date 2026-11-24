@@ -1,1 +1,114 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Campus — Room Availability Checker (Code-Based)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Smart Campus Room Availability Checker</h1>
+      <p class="subtitle">
+        Code-Based Reference Implementation • <strong>Room 304 (Smart Lab)</strong>
+      </p>
+      <div class="clock-banner" role="status">
+        Simulated Campus Clock (Reference Now): <strong id="refClockDisplay"></strong>
+        <span class="badge-muted">Fictional Data Only • No Backend</span>
+      </div>
+    </header>
+
+    <div class="layout-grid">
+      <section class="card" aria-labelledby="form-heading">
+        <h2 id="form-heading">Check Slot Availability</h2>
+        <form id="availabilityForm" novalidate>
+          <div class="field">
+            <label for="startTimeInput">Requested Start Time</label>
+            <input
+              id="startTimeInput"
+              name="startTime"
+              type="datetime-local"
+              value="2026-12-01T11:30"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="durationInput">Duration (minutes, 1–120)</label>
+            <input
+              id="durationInput"
+              name="duration"
+              type="number"
+              value="60"
+              step="1"
+              inputmode="numeric"
+            />
+          </div>
+
+          <div class="field checkbox-field">
+            <input id="blockedCheckbox" name="isBlocked" type="checkbox" />
+            <label for="blockedCheckbox">Room Blocked (Maintenance / Admin Hold)</label>
+          </div>
+
+          <div class="button-row">
+            <button type="submit" class="btn-primary">Check Availability</button>
+            <button type="button" id="runTestsBtn" class="btn-secondary">Run T1–T8 Suite</button>
+          </div>
+        </form>
+
+        <div id="resultBox" class="result-box result-neutral" aria-live="polite">
+          <div class="result-top">
+            <span id="resultStatus" class="result-status">Ready</span>
+            <code id="resultCode" class="result-code">WAITING</code>
+          </div>
+          <p id="resultMessage" class="result-message">
+            Enter a start time and duration, then select Check Availability.
+          </p>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="schedule-heading">
+        <h2 id="schedule-heading">Existing Fictional Bookings (Immutable)</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Time Slot</th>
+                <th>Title</th>
+              </tr>
+            </thead>
+            <tbody id="bookingsTableBody"></tbody>
+          </table>
+        </div>
+        <p class="hint">
+          Checking availability never mutates or creates booking records (AC5 / T8).
+        </p>
+      </section>
+    </div>
+
+    <section id="testResultsSection" class="card hidden" aria-labelledby="tests-heading">
+      <h2 id="tests-heading">Automated Contract Verification (T1–T8)</h2>
+      <p id="testSummary" class="test-summary"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Input Summary</th>
+              <th>Expected</th>
+              <th>Observed</th>
+              <th>Pass/Fail</th>
+            </tr>
+          </thead>
+          <tbody id="testResultsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
